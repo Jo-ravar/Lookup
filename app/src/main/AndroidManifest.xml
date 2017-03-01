@@ -3,6 +3,8 @@
     package="com.joravar.lookup">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,18 +13,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
         <service
             android:name=".Myservice"
             android:exported="true" />
 
-        <activity android:name=".Main2Activity"></activity>
+        <activity
+            android:name=".Main2Activity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <meta-data
+            android:name= "com.google.gms.vision.DEPENDENCIES"
+            android:value="orc"/>
     </application>
 
 </manifest>
