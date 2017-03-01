@@ -43,7 +43,7 @@ public class Myservice extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Toast.makeText(this,"Service is created",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Service is seriously created",Toast.LENGTH_SHORT).show();
     }
 
     @Override
